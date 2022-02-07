@@ -24,7 +24,7 @@ There have been major changes made in this final product;I have added the use of
 
 ![Lodash Integration4](https://user-images.githubusercontent.com/34340232/152879517-5795a755-3fa2-4042-aa93-64486a73f738.png)
 
-# Behind the scenes in the MongoDB Terminal:
+# Correction by Lodash
 
 ![Lodash Integration5](https://user-images.githubusercontent.com/34340232/152879518-4e35052a-d74b-4be4-90f7-5f483c0c797d.png)
 
