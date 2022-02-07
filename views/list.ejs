@@ -1,0 +1,49 @@
+<%- include('header'); -%>
+
+
+
+<div class="box" id="heading">
+
+  <h1> <%= listTitle %> </h1>
+
+</div>
+
+<div class="box">
+
+<% newListItems.forEach(function(item){ %>
+
+
+  <form action="/delete" method="post">
+
+
+
+  <div class="item">
+    <input type="checkbox" name="checkbox"  value="<%= item._id  %>"  onChange="this.form.submit()">
+    <p> <%= item.name %></p>
+    <!-- {newListItems[i].name} will render and will also be replaced with {item.name}
+  the {foundItems} from {app.js} but instead of bulk-writing the ObjectId and other
+  complicated information that the end-user will find difficulty in reading
+  will be simplified.We have also removed the traditional for-loop with forEach() loop.
+  -->
+  </div>
+  <input type="hidden" name="listName" value="<%= listTitle %>"></input>
+  <!-- We have to create the "hidden" input type for stopping the page from
+rather than "fake deleting" the items and redirecting us to the home page
+but rather we will create a method to "actually" delete the item
+while we are on the relevant page -->
+  </form>
+
+<% }) %>
+
+
+
+  <form class="item" action="/" method="post">
+    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+    <button type="submit" name="list" value=<%= listTitle %>>+</button>
+
+  </form>
+
+
+</div>
+
+<%- include('footer'); -%>
